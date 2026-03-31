@@ -25,7 +25,7 @@ const Performance = () => {
         }
         const fetchPerformance = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:8080/codeforces/performance/${handle}`);
+                const { data } = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/performance/${handle}`);
                 setPerformanceData(data);
             } catch (err) {
                 setError("Error fetching performance data.");
@@ -34,7 +34,7 @@ const Performance = () => {
 
         const fetchContestPerformance = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:8080/codeforces/contestPerformance/${handle}`);
+                const { data } = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestPerformance/${handle}`);
                 setContestData(data);
             } catch (err) {
                 setError("Error fetching contest performance.");
@@ -43,7 +43,7 @@ const Performance = () => {
 
         const fetchIndexPerformance = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:8080/codeforces/contestIdPerformance/${handle}`);
+                const { data } = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestIdPerformance/${handle}`);
                 setIndexData(data.IndexCount);
             } catch (err) {
                 setError("Error fetching index performance.");

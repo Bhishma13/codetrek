@@ -23,12 +23,12 @@ const CompareWithOthers = () => {
         const fetchData = async () => {
             try {
                 const [res1, res2, contestRes1, contestRes2, indexRes1, indexRes2] = await Promise.all([
-                    axios.get(`http://localhost:8080/codeforces/performance/${handle1}`),
-                    axios.get(`http://localhost:8080/codeforces/performance/${handle2}`),
-                    axios.get(`http://localhost:8080/codeforces/contestPerformance/${handle1}`),
-                    axios.get(`http://localhost:8080/codeforces/contestPerformance/${handle2}`),
-                    axios.get(`http://localhost:8080/codeforces/contestIdPerformance/${handle1}`),
-                    axios.get(`http://localhost:8080/codeforces/contestIdPerformance/${handle2}`)
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/performance/${handle1}`),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/performance/${handle2}`),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestPerformance/${handle1}`),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestPerformance/${handle2}`),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestIdPerformance/${handle1}`),
+                    axios.get(`${import.meta.env.VITE_API_BASE_URL}/codeforces/contestIdPerformance/${handle2}`)
                 ]);
                 setUser1Data(res1.data);
                 setUser2Data(res2.data);

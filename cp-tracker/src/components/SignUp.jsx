@@ -16,7 +16,7 @@ const SignUp = ({ setAuth }) => {
         setLoading(true);
         setError('');
         try {
-            const res = await axios.post('http://localhost:8080/auth/register', { username, password, linkedHandle });
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/register`, { username, password, linkedHandle });
             setAuth(res.data);
             navigate(`/dashboard?handle=${res.data.linkedHandle}`);
         } catch (err) {
