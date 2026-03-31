@@ -1,5 +1,4 @@
 import React from 'react';
-import cpLogo from '../../assets/cpLogo1.jpg';
 import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ auth, setAuth }) => {
@@ -10,12 +9,12 @@ const Navbar = ({ auth, setAuth }) => {
       <div className="fixed top-0 left-0 w-full flex items-center justify-between bg-white py-4 px-8 shadow-md z-50">
 
         {/* Left Section - CP Logo */}
-        <img
-          src={cpLogo}
-          alt="CP Logo"
-          className="h-14 w-auto cursor-pointer"
+        <div
+          className="h-14 w-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-bold text-xl cursor-pointer shadow-lg"
           onClick={() => navigate("/")}
-        />
+        >
+          CT
+        </div>
 
         {/* Center Section - CodeTrek */}
         <h1
