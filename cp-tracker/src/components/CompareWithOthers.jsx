@@ -48,7 +48,7 @@ const CompareWithOthers = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center p-8 relative overflow-hidden">
-            <h1 className="text-4xl font-bold text-blue-600 mb-10 tracking-wide mt-10">
+            <h1 className="text-4xl font-bold text-emerald-600 mb-10 tracking-wide mt-10">
                 Comparing <span className="text-gray-800">{handle1}</span> vs <span className="text-gray-800">{handle2}</span>
             </h1>
 

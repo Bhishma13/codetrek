@@ -56,7 +56,7 @@ const Performance = () => {
     if (loading) {
         return (
             <div className="min-h-screen text-gray-900 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-                <h1 className="text-4xl font-bold text-blue-600 mb-8 tracking-wide z-10">Performance Analysis</h1>
+                <h1 className="text-4xl font-bold text-emerald-600 mb-8 tracking-wide z-10">Performance Analysis</h1>
                 <div className="glass-card p-8 w-3/4 z-10">
                     <h2 className="text-2xl text-gray-900 mb-4">
                         <Skeleton width={200} height={30} baseColor="#f0f0f0" highlightColor="#e0e0e0" />

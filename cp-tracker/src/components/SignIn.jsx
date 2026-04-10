@@ -33,20 +33,20 @@ const SignIn = ({ setAuth }) => {
                 transition={{ duration: 0.5 }}
                 className="glass-card p-10 w-full max-w-md z-10"
             >
-                <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
+                <h2 className="text-3xl font-bold text-emerald-600 mb-6 text-center">
                     Welcome Back
                 </h2>
                 {error && <p className="text-red-500 text-sm mb-4 text-center font-semibold">{error}</p>}
 
                 <form onSubmit={handleLogin} className="flex flex-col space-y-4">
                     <input type="text" placeholder="Username" required
-                        className="p-4 rounded-xl bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500/50 focus:outline-none placeholder-gray-500 transition-all duration-300"
+                        className="p-4 rounded-xl bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-emerald-500/50 focus:outline-none placeholder-gray-500 transition-all duration-300"
                         value={username} onChange={(e) => setUsername(e.target.value)} />
                     <input type="password" placeholder="Password" required
-                        className="p-4 rounded-xl bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500/50 focus:outline-none placeholder-gray-500 transition-all duration-300"
+                        className="p-4 rounded-xl bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-emerald-500/50 focus:outline-none placeholder-gray-500 transition-all duration-300"
                         value={password} onChange={(e) => setPassword(e.target.value)} />
                     <button type="submit" disabled={loading}
-                        className="p-4 mt-2 rounded-xl font-bold text-lg text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+                        className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-md text-white font-bold py-3 px-6 rounded-lg transition duration-200 mt-4 disabled:opacity-50"
                     >
                         {loading ? 'Signing in...' : 'Sign In'}
                     </button>

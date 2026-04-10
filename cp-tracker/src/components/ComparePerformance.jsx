@@ -34,7 +34,7 @@ const ComparePerformance = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
-            <h1 className="text-4xl font-bold text-blue-600 mb-8 tracking-wide z-10 text-center">
+            <h1 className="text-4xl font-bold text-emerald-600 mb-8 tracking-wide z-10 text-center">
                 Compare Performance
             </h1>
 
