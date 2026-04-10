@@ -42,7 +42,7 @@ const UserInput = () => {
         <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
             <BackgroundSymbols />
 
-            <h1 className="text-4xl font-bold text-blue-600 mb-8 z-10 tracking-wider">ENTER YOUR HANDLE</h1>
+            <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 mb-8 z-10 tracking-wider">ENTER YOUR HANDLE</h1>
 
             <form onSubmit={handleSubmit} className="relative w-[400px] mb-8 z-10 glass-card p-1 rounded-full flex items-center">
                 <input
@@ -66,11 +66,11 @@ const UserInput = () => {
             {error && <p className="text-red-500 font-semibold mb-4 z-10">{error}</p>}
 
             {loading ? (
-                <p className="text-blue-600 text-xl font-bold z-10 animate-pulse">⏳ Analyzing Profile...</p>
+                <p className="text-emerald-600 text-xl font-bold z-10 animate-pulse">⏳ Analyzing Profile...</p>
             ) : (
                 <button
                     onClick={handleSubmit}
-                    className="z-10 px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
+                    className="z-10 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg rounded-xl shadow-md hover:from-emerald-600 hover:to-teal-600 hover:-translate-y-1 transition-all duration-300"
                 >
                     Track Performance
                 </button>
