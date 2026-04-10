@@ -33,20 +33,20 @@ const ComparePerformance = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-8 tracking-wide z-10 text-center">
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+            <h1 className="text-4xl font-bold text-blue-600 mb-8 tracking-wide z-10 text-center">
                 Compare Performance
             </h1>
 
             <div className="glass-card p-10 w-full max-w-2xl text-center z-10">
-                <h2 className="text-2xl font-semibold mb-6 text-gray-200 tracking-wide">
-                    Comparing: <span className="text-cyan-400">{handle}</span> vs <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-500">?</span>
+                <h2 className="text-2xl font-semibold mb-6 text-gray-800 tracking-wide">
+                    Comparing: <span className="text-blue-600">{handle}</span> vs <span className="text-red-500 font-bold">?</span>
                 </h2>
 
                 <input
                     type="text"
                     placeholder="Enter another handle (e.g. tourist)"
-                    className="p-4 rounded-xl bg-white/5 border border-white/10 text-white focus:ring-2 focus:ring-cyan-500 focus:outline-none w-full mb-6 placeholder-gray-500 text-lg transition duration-300"
+                    className="p-4 rounded-xl bg-white border border-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full mb-6 placeholder-gray-500 text-lg transition duration-300"
                     value={secondHandle}
                     onChange={(e) => setSecondHandle(e.target.value)}
                 />
@@ -55,8 +55,8 @@ const ComparePerformance = () => {
 
                 <button
                     className={`p-4 rounded-xl font-bold text-lg transition-all duration-300 w-full ${secondHandle
-                            ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 hover:bg-cyan-500/40 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transform hover:-translate-y-1"
-                            : "bg-white/5 text-gray-500 cursor-not-allowed border border-white/10"
+                        ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md transform hover:-translate-y-1"
+                        : "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
                         }`}
                     onClick={validateHandle}
                     disabled={!secondHandle || loading}

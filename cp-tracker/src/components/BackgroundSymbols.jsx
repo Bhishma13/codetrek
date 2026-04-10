@@ -13,7 +13,7 @@ const getRandomPosition = () => ({
 
 const BackgroundSymbols = () => {
   return (
-    
+
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
       {symbols.map((symbol, index) => {
         const style = getRandomPosition();
@@ -21,7 +21,7 @@ const BackgroundSymbols = () => {
           <span
             key={index}
             style={style}
-            className="absolute animate-float text-white blur-[1px]"
+            className="absolute animate-float blur-[1px]"
           >
             {symbol}
           </span>

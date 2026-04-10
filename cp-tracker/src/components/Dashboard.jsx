@@ -43,12 +43,12 @@ const Dashboard = () => {
     }, [location.search]);
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden flex justify-between items-start pt-16 px-10">
+        <div className="min-h-screen relative overflow-hidden flex justify-between items-start pt-16 px-10">
             <BackgroundSymbols /> {/* ✅ background animation */}
 
             {/* Left Section - User Profile */}
             <div className="w-1/3 z-10">
-                <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mb-6 tracking-wide">
+                <h1 className="text-3xl font-bold text-blue-600 mb-6 tracking-wide">
                     User Profile
                 </h1>
 
@@ -58,17 +58,17 @@ const Dashboard = () => {
                     <p className="text-red-500 text-lg">{error}</p>
                 ) : (
                     <div className="glass-card p-8 flex flex-col items-center w-full">
-                        <img src={userData.titlePhoto} alt="Title Badge" className="w-24 h-24 mb-6 rounded-full border-2 border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.5)] object-cover" />
-                        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 mb-2">{userData.handle}</h2>
-                        <p className="text-gray-300">{userData.firstName ? `${userData.firstName} ${userData.lastName}` : "No Name Provided"}</p>
-                        <p className="text-gray-300">Country: {userData.country || "N/A"}</p>
-                        <p className="text-gray-300">City: {userData.city || "N/A"}</p>
-                        <p className="text-gray-300">Organization: {userData.organization || "N/A"}</p>
-                        <p className="text-blue-400 font-semibold">Current Rating: {userData.rating}</p>
-                        <p className="text-yellow-400 font-semibold">Max Rating: {userData.maxRating}</p>
-                        <p className="text-purple-400 font-semibold">Title: {userData.rank || "Unrated"}</p>
-                        <p className="text-purple-500 font-semibold">Max Title: {userData.maxRank || "Unrated"}</p>
-                        <p className={`text-lg font-semibold ${userData.contribution >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        <img src={userData.titlePhoto} alt="Title Badge" className="w-24 h-24 mb-6 rounded-full border-2 border-blue-400 shadow-md object-cover" />
+                        <h2 className="text-3xl font-bold text-gray-900 mb-2">{userData.handle}</h2>
+                        <p className="text-gray-600">{userData.firstName ? `${userData.firstName} ${userData.lastName}` : "No Name Provided"}</p>
+                        <p className="text-gray-600">Country: {userData.country || "N/A"}</p>
+                        <p className="text-gray-600">City: {userData.city || "N/A"}</p>
+                        <p className="text-gray-600">Organization: {userData.organization || "N/A"}</p>
+                        <p className="text-blue-600 font-semibold">Current Rating: {userData.rating}</p>
+                        <p className="text-yellow-600 font-semibold">Max Rating: {userData.maxRating}</p>
+                        <p className="text-purple-600 font-semibold">Title: {userData.rank || "Unrated"}</p>
+                        <p className="text-purple-700 font-semibold">Max Title: {userData.maxRank || "Unrated"}</p>
+                        <p className={`text-lg font-semibold ${userData.contribution >= 0 ? 'text-green-600' : 'text-red-500'}`}>
                             Contribution: {userData.contribution}
                         </p>
                     </div>
@@ -77,16 +77,16 @@ const Dashboard = () => {
 
             {/* Right Section - Motivational Text + Button */}
             <div className="w-1/2 flex flex-col justify-center items-start z-10 mt-20">
-                <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-6 leading-tight">
+                <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
                     Code. Compete. Conquer. <br />
-                    <span className="text-cyan-400">See how far you've come!</span>
+                    <span className="text-blue-600">See how far you've come!</span>
                 </h2>
-                <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-lg">
+                <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
                     Unleash your potential and explore your competitive programming journey with deep analytics and stunning visualizations.
                 </p>
                 <button
                     onClick={() => navigate(`/performance/${handle}`)}
-                    className="px-8 py-4 bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:bg-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-1 transition duration-300 transform"
+                    className="px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition duration-300 transform"
                 >
                     Explore Your Performance
                 </button>

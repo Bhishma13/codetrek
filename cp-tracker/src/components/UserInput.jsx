@@ -39,10 +39,10 @@ const UserInput = () => {
     };
 
     return (
-        <div className="bg-[#0a0a0a] min-h-screen flex flex-col items-center justify-center text-white relative overflow-hidden">
-          <BackgroundSymbols/>
+        <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+            <BackgroundSymbols />
 
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 mb-8 z-10 tracking-wider">ENTER YOUR HANDLE</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-8 z-10 tracking-wider">ENTER YOUR HANDLE</h1>
 
             <form onSubmit={handleSubmit} className="relative w-[400px] mb-8 z-10 glass-card p-1 rounded-full flex items-center">
                 <input
@@ -50,7 +50,7 @@ const UserInput = () => {
                     placeholder="e.g. tourist"
                     value={handle}
                     onChange={(e) => setHandle(e.target.value)}
-                    className="p-4 text-white bg-transparent w-full pl-6 pr-12 focus:outline-none placeholder-gray-400 font-semibold text-lg"
+                    className="p-4 text-gray-900 bg-transparent w-full pl-6 pr-12 focus:outline-none placeholder-gray-500 font-semibold text-lg"
                 />
                 {handle && (
                     <button
@@ -66,11 +66,11 @@ const UserInput = () => {
             {error && <p className="text-red-500 font-semibold mb-4 z-10">{error}</p>}
 
             {loading ? (
-                <p className="text-cyan-400 text-xl font-bold z-10 animate-pulse">⏳ Analyzing Profile...</p>
+                <p className="text-blue-600 text-xl font-bold z-10 animate-pulse">⏳ Analyzing Profile...</p>
             ) : (
                 <button
                     onClick={handleSubmit}
-                    className="z-10 px-8 py-4 bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:bg-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-1 transition-all duration-300"
+                    className="z-10 px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
                 >
                     Track Performance
                 </button>

@@ -47,9 +47,9 @@ const CompareWithOthers = () => {
     }, [handle1, handle2]);
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center p-8 relative overflow-hidden">
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-10 tracking-wide mt-10">
-                Comparing <span className="text-white">{handle1}</span> vs <span className="text-white">{handle2}</span>
+        <div className="min-h-screen flex flex-col items-center p-8 relative overflow-hidden">
+            <h1 className="text-4xl font-bold text-blue-600 mb-10 tracking-wide mt-10">
+                Comparing <span className="text-gray-800">{handle1}</span> vs <span className="text-gray-800">{handle2}</span>
             </h1>
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -58,8 +58,8 @@ const CompareWithOthers = () => {
                 <div className="w-full max-w-7xl flex flex-col items-center space-y-10">
                     {[1, 2, 3, 4, 5].map((i) => (
                         <div key={i} className="glass-card p-8 w-full">
-                            <Skeleton height={40} width={300} baseColor="#1a1a1a" highlightColor="#333" className="mb-6 rounded-md" />
-                            <Skeleton height={350} baseColor="#1a1a1a" highlightColor="#333" className="rounded-xl" />
+                            <Skeleton height={40} width={300} baseColor="#f0f0f0" highlightColor="#e0e0e0" className="mb-6 rounded-md" />
+                            <Skeleton height={350} baseColor="#f0f0f0" highlightColor="#e0e0e0" className="rounded-xl" />
                         </div>
                     ))}
                 </div>
@@ -68,7 +68,7 @@ const CompareWithOthers = () => {
                     <div className="w-full max-w-7xl flex flex-col items-center">
 
                         <div className="glass-card p-8 w-full mb-10">
-                            <h3 className="text-2xl font-bold text-cyan-300 mb-6 border-b border-gray-700 pb-2">Problems Solved by Rating</h3>
+                            <h3 className="text-2xl font-bold text-blue-600 mb-6 border-b border-gray-200 pb-2">Problems Solved by Rating</h3>
                             <div className="w-full h-96">
                                 <Bar
                                     data={{
@@ -92,7 +92,7 @@ const CompareWithOthers = () => {
                         </div>
 
                         <div className="glass-card p-8 w-full mb-10">
-                            <h3 className="text-2xl font-bold text-cyan-300 mb-8 border-b border-gray-700 pb-2">Programming Language Usage</h3>
+                            <h3 className="text-2xl font-bold text-blue-600 mb-8 border-b border-gray-200 pb-2">Programming Language Usage</h3>
                             <div className="w-full flex flex-wrap justify-center gap-16">
                                 <div className="w-80 h-80">
                                     <h4 className="text-lg font-semibold text-center">{handle1}</h4>
@@ -128,11 +128,11 @@ const CompareWithOthers = () => {
                         </div>
 
                         <div className="glass-card p-8 w-full mb-10">
-                            <h3 className="text-2xl font-bold text-cyan-300 mb-8 border-b border-gray-700 pb-2">Contest Performance Comparison</h3>
+                            <h3 className="text-2xl font-bold text-blue-600 mb-8 border-b border-gray-200 pb-2">Contest Performance Comparison</h3>
 
                             <div className="flex flex-col items-center w-full">
                                 <div className="w-full lg:w-3/4 h-80 mb-12">
-                                    <h4 className="text-lg font-semibold text-center text-gray-300 mb-4">Total Contests Participated</h4>
+                                    <h4 className="text-lg font-semibold text-center text-gray-700 mb-4">Total Contests Participated</h4>
                                     <Bar
                                         data={{
                                             labels: ["Total Contests"],
@@ -153,7 +153,7 @@ const CompareWithOthers = () => {
                                 </div>
 
                                 <div className="w-full lg:w-3/4 h-80 mb-12">
-                                    <h4 className="text-lg font-semibold text-center text-gray-300 mb-4">Performance in the Last 10 Contests</h4>
+                                    <h4 className="text-lg font-semibold text-center text-gray-700 mb-4">Performance in the Last 10 Contests</h4>
                                     <Line
                                         data={{
                                             labels: Array.from({ length: 10 }, (_, i) => `Contest ${i + 1}`),
@@ -177,8 +177,8 @@ const CompareWithOthers = () => {
 
                                 <div className="w-full lg:w-3/4 grid grid-cols-2 gap-8 mb-4">
                                     {["worstRank", "bestRank", "maxRatingDrop", "maxRatingIncrease"].map((metric, index) => (
-                                        <div key={index} className="w-full h-64 bg-black/50 p-4 rounded-xl border border-gray-800">
-                                            <h4 className="text-lg font-semibold text-center text-gray-300 mb-4">
+                                        <div key={index} className="w-full h-64 bg-white shadow-sm p-4 rounded-xl border border-gray-200">
+                                            <h4 className="text-lg font-semibold text-center text-gray-800 mb-4">
                                                 {metric.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
                                             </h4>
                                             <Bar
@@ -205,7 +205,7 @@ const CompareWithOthers = () => {
                         </div>
 
                         <div className="glass-card p-8 w-full mb-10">
-                            <h3 className="text-2xl font-bold text-cyan-300 mb-6 border-b border-gray-700 pb-2">Problem Index Count Comparison</h3>
+                            <h3 className="text-2xl font-bold text-blue-600 mb-6 border-b border-gray-200 pb-2">Problem Index Count Comparison</h3>
                             <div className="w-full h-96">
                                 <Bar
                                     data={{
@@ -229,7 +229,7 @@ const CompareWithOthers = () => {
                         </div>
 
                         <div className="glass-card p-8 w-full mb-10">
-                            <h3 className="text-2xl font-bold text-cyan-300 mb-6 border-b border-gray-700 pb-2">Rank Comparison in Last 10 Contests</h3>
+                            <h3 className="text-2xl font-bold text-blue-600 mb-6 border-b border-gray-200 pb-2">Rank Comparison in Last 10 Contests</h3>
                             <div className="w-full h-96">
                                 <Bar
                                     data={{

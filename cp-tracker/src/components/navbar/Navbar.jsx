@@ -18,7 +18,7 @@ const Navbar = ({ auth, setAuth }) => {
 
         {/* Center Section - CodeTrek */}
         <h1
-          className="text-4xl font-bold text-black font-serif cursor-pointer transition duration-300 hover:text-gray-700"
+          className="text-4xl font-bold text-gray-900 font-serif cursor-pointer transition duration-300 hover:text-blue-600"
           onClick={() => navigate("/")}
         >
           CodeTrek
@@ -28,13 +28,13 @@ const Navbar = ({ auth, setAuth }) => {
         <ul className="flex items-center space-x-10">
           <li
             onClick={() => navigate("/")}
-            className="text-lg text-black hover:text-gray-700 transition duration-300 cursor-pointer"
+            className="text-lg text-gray-700 hover:text-blue-600 transition duration-300 cursor-pointer"
           >
             Home
           </li>
           <li
             onClick={() => navigate("/about")}
-            className="text-lg text-black hover:text-gray-700 transition duration-300 cursor-pointer"
+            className="text-lg text-gray-700 hover:text-blue-600 transition duration-300 cursor-pointer"
           >
             About us
           </li>
@@ -42,13 +42,13 @@ const Navbar = ({ auth, setAuth }) => {
             <>
               <li
                 onClick={() => navigate(`/dashboard?handle=${auth.linkedHandle}`)}
-                className="text-lg font-bold text-cyan-600 hover:text-cyan-500 transition duration-300 cursor-pointer"
+                className="text-lg font-bold text-blue-600 hover:text-blue-700 transition duration-300 cursor-pointer"
               >
                 Dashboard ({auth.linkedHandle})
               </li>
               <li
                 onClick={() => { setAuth(null); navigate("/"); }}
-                className="text-lg font-bold text-red-500 hover:text-red-400 transition duration-300 cursor-pointer"
+                className="text-lg font-bold text-red-600 hover:text-red-500 transition duration-300 cursor-pointer"
               >
                 Logout
               </li>
@@ -57,13 +57,13 @@ const Navbar = ({ auth, setAuth }) => {
             <>
               <li
                 onClick={() => navigate("/signin")}
-                className="text-lg font-bold text-cyan-600 hover:text-cyan-500 transition duration-300 cursor-pointer bg-cyan-100/50 px-4 py-1 rounded-full"
+                className="text-lg font-bold text-blue-600 hover:text-blue-700 transition duration-300 cursor-pointer bg-blue-50 px-4 py-1 rounded-full border border-blue-200"
               >
                 Sign In
               </li>
               <li
                 onClick={() => navigate("/signup")}
-                className="text-lg font-bold text-white bg-black hover:bg-gray-800 transition duration-300 cursor-pointer px-4 py-1 rounded-full"
+                className="text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 transition duration-300 cursor-pointer px-4 py-1 rounded-full"
               >
                 Sign Up
               </li>
