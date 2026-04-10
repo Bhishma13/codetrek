@@ -42,7 +42,7 @@ const Home = ({ auth }) => {
           CodeTrek
         </motion.h1>
 
-        <motion.p className="text-xl max-w-2xl text-gray-600 mb-10" variants={itemVariants}>
+        <motion.p className="text-xl text-gray-700 mb-10 max-w-2xl leading-relaxed font-medium" variants={itemVariants}>
           Track your Codeforces progress with incredibly fast, real-time data & insightful, beautiful analytics.
         </motion.p>
 
