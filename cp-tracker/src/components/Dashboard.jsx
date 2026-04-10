@@ -73,7 +73,7 @@ const Dashboard = () => {
                         <h3 className="text-xl font-bold text-gray-800 mt-6 mb-3 block">Quick Actions</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                             <button
-                                onClick={() => navigate(`/performance?handle=${userData.handle}`)}
+                                onClick={() => navigate(`/performance/${userData.handle}`)}
                                 className="px-6 py-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-700 font-semibold rounded-xl transition duration-300 shadow-sm flex items-center justify-center space-x-2"
                             >
                                 <span>📊 View Deep Performance Analytics</span>
