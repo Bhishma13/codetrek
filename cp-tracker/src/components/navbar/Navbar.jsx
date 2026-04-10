@@ -8,10 +8,7 @@ const Navbar = ({ auth, setAuth }) => {
     <div>
       <div className="fixed top-0 left-0 w-full flex items-center justify-between bg-white py-4 px-8 shadow-md z-50">
 
-        {/* Left Section - Empty or Reserved */}
-        <div></div>
-
-        {/* Center Section - CodeTrek */}
+        {/* Left Section - CodeTrek */}
         <h1
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 tracking-tight cursor-pointer transition duration-300 hover:scale-105"
           onClick={() => navigate("/")}
