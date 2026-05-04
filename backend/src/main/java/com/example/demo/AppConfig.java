@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletRequest;
@@ -10,13 +8,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.client.RestTemplate;
-
-import javax.sql.DataSource;
-import java.net.URI;
 
 @Configuration
 public class AppConfig {
@@ -26,21 +20,7 @@ public class AppConfig {
         return new RestTemplate();
     }
 
-    @Bean
-    @Primary
-    public DataSource dataSource() {
-        String dbUrl = System.getenv("DATABASE_URL");
-        // Railway format: postgresql://user:pass@host:port/dbname
-        URI uri = URI.create(dbUrl);
-        String[] userInfo = uri.getUserInfo().split(":", 2);
 
-        HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:postgresql://" + uri.getHost() + ":" + uri.getPort() + uri.getPath());
-        config.setUsername(userInfo[0]);
-        config.setPassword(userInfo[1]);
-        config.setDriverClassName("org.postgresql.Driver");
-        return new HikariDataSource(config);
-    }
 
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
